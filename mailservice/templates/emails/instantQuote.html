@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+      margin: 0;
+    }
+    .email-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e0e0e0;
+    }
+    .header {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      color: white;
+      padding: 18px 25px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px 25px;
+    }
+    .label {
+      font-weight: bold;
+      color: #333;
+      display: inline-block;
+      width: 120px;
+    }
+    .value {
+      color: #555;
+    }
+    .description-box {
+      background: #f8f9fa;
+      border-left: 4px solid #0d6efd;
+      padding: 10px 15px;
+      margin-top: 10px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .footer {
+      background: #f1f3f5;
+      padding: 15px 25px;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="header">
+      📩 New Instant Quote Request
+    </div>
+    <div class="content">
+      <p><span class="label">Product:</span> <span class="value">{{ product }}</span></p>
+      <p><span class="label">Name:</span> <span class="value">{{ name }}</span></p>
+      <p><span class="label">Email:</span> <span class="value">{{ email }}</span></p>
+      <p><span class="label">Mobile:</span> <span class="value">{{ mobile }}</span></p>
+
+      <p class="label" style="margin-top: 20px;">Description:</p>
+      <div class="description-box">
+        {{ description }}
+      </div>
+    </div>
+    <div class="footer">
+      This is an automated email from your Instant Quote system.
+    </div>
+  </div>
+</body>
+</html>

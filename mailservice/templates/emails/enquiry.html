@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fc;
+      padding: 0;
+      margin: 0;
+    }
+    .email-wrapper {
+      width: 100%;
+      background-color: #f7f9fc;
+      padding: 30px 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid #e6e9f1;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #e6e9f1;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    .header h2 {
+      color: #2c3e50;
+      margin: 0;
+      font-size: 22px;
+    }
+    .details {
+      margin-bottom: 20px;
+    }
+    .details p {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #444;
+    }
+    .label {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    .description {
+      background: #f8fafc;
+      padding: 15px;
+      border-left: 4px solid #3498db;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="container">
+      <div class="header">
+        <h2>📩 New Product Enquiry</h2>
+      </div>
+      <div class="details">
+        <p><span class="label">Product:</span> {{ product }}</p>
+        <p><span class="label">Name:</span> {{ name }}</p>
+        <p><span class="label">Email:</span> {{ email }}</p>
+        <p><span class="label">Mobile:</span> {{ mobile }}</p>
+      </div>
+      <div>
+        <p class="label">Description:</p>
+        <div class="description">
+          {{ description }}
+        </div>
+      </div>
+      <div class="footer">
+        This is an automated notification. Please do not reply to this email.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
